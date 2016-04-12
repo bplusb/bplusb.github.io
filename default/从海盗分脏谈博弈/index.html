@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>主页</title>
+    <title>从海盗分脏谈博弈</title>
   
     <meta name="author" content="Jun Hu">
 
@@ -63,19 +63,13 @@
     <div class="container">
 
       <div class="content">
-        
-<div class="page-header">
-  <h1>主页 </h1>
+        <div class="page-header">
+  <h1>从海盗分脏谈博弈 </h1>
 </div>
 
 <div class="row">
-  <div class="span12">
-    
-
-<div class="post">
-  <h3 class="title"><a href="/default/%E4%BB%8E%E6%B5%B7%E7%9B%97%E5%88%86%E8%84%8F%E8%B0%88%E5%8D%9A%E5%BC%88/">从海盗分脏谈博弈</a> <span class="date">2016-04-12</span></h3>
-
-  <p>昨天晚上室友回来说起一道面试题。</p>
+  <div class="span8">
+    <p>昨天晚上室友回来说起一道面试题。</p>
 
 <blockquote>
 <p>5个海盗分100个金币，推流给分配方案，如果同意的人超过半数（含本人）则按该方案分脏，否则给方案的人被杀死。问题是假设这些海盗都极度聪明且自私，最后应该会形成怎样的局面呢？</p>
@@ -99,45 +93,100 @@
 
 <p>在我的3个目标定义下3号的分配方案会是[100,0,0]。2号的分配方案是[98,0,1,1]，这样能争取到4号5号的票，因为比3号给的待遇好。1号为了使超过半数的人投自己，就需要让半数人比2号给的方案好。因此1号有两种方案，[97,0,1,2,0]或者［97,0,1,0,2]。</p>
 
+<p>问题到这里就解决了！但是1号的方案却让我陷入了沉思。如果这里有6个人呢，0号会如何给出方案呢，对应与1号的两种方案，他可能给出[96,0,1,2,0,1]或者[96,0,1,2,1,0]。现在的问题是4号和5号认为自己在1号的方案下有2枚金币的可能，所以一枚金币可能是不足以贿赂他们的。</p>
 
-  <div class="more">
-    <a href="/default/%E4%BB%8E%E6%B5%B7%E7%9B%97%E5%88%86%E8%84%8F%E8%B0%88%E5%8D%9A%E5%BC%88/" class="btn">read more..</a>
+<p>我又想起小时候好像看过100个海盗分金币问题，百度了一下，只搜到很多5海盗分100金币，也许是面试题的关系？分析方式与我上面类似。要解决100个海盗分100金币，应该重新给他们定义一个决策策略。</p>
+
+<ol>
+<li>第一目标是自己不死。</li>
+<li>第二目标当被分配金币不比以后所得金币的期望大时，倾向于杀死同伴。</li>
+<li>分配原则是自己分配金币时有多种最优方案时，在所有方案中随机选择一种。</li>
+</ol>
+
+<p>第三个分配原则也可以改成给编号小的分配，分配原则的不同将导致每个人期望的不同，进而导致决策的不同。</p>
+
+<p>下面我将根据以上决策策略写一份代码求解。</p>
+
+<pre><code class="cpp">#include &lt;iostream&gt;
+int main () {
+   return 0;
+   dfasdf
+   dasf
+   dsfa
+   ew
+   
+}
+</code></pre>
+
+<p>问题至此，得到了一个较为满意的解答。</p>
+
+<p>一个简单的问题，多来几个人也复杂了许多，这就是量变引起质变。</p>
+
+<p>经过思考，也让我对理性人博弈有了更好的理解。理性人博弈里更多的是对每个人都是理性人而且互相知道对方策略，然后小心翼翼的选出最优的决策。每个人遇到什么样的情况都被摸的一清二楚，大家都在框架中寻找局部最优解。</p>
+
+<p>真实世界的博弈往往更显复杂，每个人有自己的价值判断，对别人的价值判断的了解也不详尽。这种模糊空间有时候反而会促进冒险，朝着更靠近全局最优解的方向前进吧。</p>
+
+<p>非理性真是有趣啊！</p>
+
+<hr />
+
+<p>PS:我觉得100个海盗分金币的题应该是这样的。
+&gt; 100个海盗分100个金币，推流给分配方案，如果同意的人达到半数（含本人）则按该方案分脏，否则给方案的人被杀死。问题是假设这些海盗都极度聪明且自私，最后应该会形成怎样的局面呢？</p>
+
+<p>题面里“超过半数”变成了“达到半数”，然后最后的分配方案就是[51,0,1,0,1,0,&hellip;.,1,0]。猜猜看为啥？</p>
+
+    <hr>
+    <div class="pagination">
+      <ul>
+        <ul>
+          
+          
+            <li class="prev disabled"><a>&larr; Previous</a></li>
+          
+
+            <li><a href="/archive">Archive</a></li>
+
+          
+            <li class="next"><a href="/default/%E6%8B%96%E5%BB%B6%E7%97%87%E7%9A%84%E6%B2%BB%E7%96%97%E6%96%B9%E6%B3%95/" title="拖延症的治疗方法">Next &rarr;</a></li>
+          
+          
+        </ul>
+      </ul>
+    </div>
+    <hr>
+    
+<div id="disqus_thread"></div>
+<script>
+    var disqus_developer = 1;
+    var disqus_shortname = 'bplusbgithubio'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
   </div>
-</div>
-
-<div class="post">
-  <h3 class="title"><a href="/default/%E6%8B%96%E5%BB%B6%E7%97%87%E7%9A%84%E6%B2%BB%E7%96%97%E6%96%B9%E6%B3%95/">拖延症的治疗方法</a> <span class="date">2016-04-05</span></h3>
-
-  <p>定计划 -&gt; 无限拖延 -&gt; 愧疚 -&gt; 定计划</p>
-
-<p>现在我正处于愧疚阶段。</p>
-
-<p>这病该怎么治，我不知道。</p>
-
-<p>在这清明过后的第一天，我决定挂篇blog婊自己。</p>
-
-
-  <div class="more">
-    <a href="/default/%E6%8B%96%E5%BB%B6%E7%97%87%E7%9A%84%E6%B2%BB%E7%96%97%E6%96%B9%E6%B3%95/" class="btn">read more..</a>
-  </div>
-</div>
-
-<div class="post">
-  <h3 class="title"><a href="/default/%E7%BC%98%E8%B5%B7/">缘起</a> <span class="date">2016-03-19</span></h3>
-
-  <p>看到室友都有github，渣硕也蠢蠢欲动了呢。</p>
-
-<p>hello，github。</p>
-
-<p><img src="/assets/media/缘起/yuanqi.jpg" alt="" width="600"></p>
-
-
-  <div class="more">
-    <a href="/default/%E7%BC%98%E8%B5%B7/" class="btn">read more..</a>
-  </div>
-</div>
-
-
+  
+  <div class="span4">
+    <h4>Published</h4>
+    <div class="date"><span>2016-04-12</span></div>
+    <br>
+    <h4>Tags</h4>
+    <ul class="tag_box">
+    
+      <li>
+  <a href="/tags/#%E8%B6%A3%E9%A2%98-ref">趣题 <span>1</span></a>
+</li>
+    
+      <li>
+  <a href="/tags/#%E5%8D%9A%E5%BC%88-ref">博弈 <span>1</span></a>
+</li>
+    
+    </ul>
   </div>
 </div>
 
