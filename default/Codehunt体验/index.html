@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>主页</title>
+    <title>Codehunt体验</title>
   
     <meta name="author" content="Jun Hu">
 
@@ -63,19 +63,13 @@
     <div class="container">
 
       <div class="content">
-        
-<div class="page-header">
-  <h1>主页 </h1>
+        <div class="page-header">
+  <h1>Codehunt体验 </h1>
 </div>
 
 <div class="row">
-  <div class="span12">
-    
-
-<div class="post">
-  <h3 class="title"><a href="/default/Codehunt%E4%BD%93%E9%AA%8C/">Codehunt体验</a> <span class="date">2016-04-21</span></h3>
-
-  <p>前两年的编程之美挑战赛MS就一直在推codehunt，让codehunt和hihocoder按照参赛比例同时进入复赛决赛。</p>
+  <div class="span8">
+    <p>前两年的编程之美挑战赛MS就一直在推codehunt，让codehunt和hihocoder按照参赛比例同时进入复赛决赛。</p>
 
 <p>hihocoder基本就是acmicpc的赛制，国内大环境玩了这么多年，会的人多玩的人也多，所以codehunt参赛人数极少，占的比例也是非常的小。</p>
 
@@ -99,78 +93,62 @@
 <li>杜绝陈题。由于算法竞赛网上题量巨大，以往的复赛出题往往很容易出陈题，作为一个线上比赛，有陈题往往会造成非常大的不公平。</li>
 </ol>
 
+<p>只把codehunt作为初赛前3000名的筛选，我认为是比较可行的。但是讲真这个平台感觉一点都不有趣，解出题目也往往没有icpc带来的快感多。</p>
 
-  <div class="more">
-    <a href="/default/Codehunt%E4%BD%93%E9%AA%8C/" class="btn">read more..</a>
+<p>最后，作为一个逆向感受力欠佳的渣渣，也不知道今年还能拿到衣服么！</p>
+
+    <hr>
+    <div class="pagination">
+      <ul>
+        <ul>
+          
+          
+            <li class="prev disabled"><a>&larr; Previous</a></li>
+          
+
+            <li><a href="/archive">Archive</a></li>
+
+          
+            <li class="next"><a href="/default/%E4%BB%8E%E6%B5%B7%E7%9B%97%E5%88%86%E8%84%8F%E8%B0%88%E5%8D%9A%E5%BC%88/" title="从海盗分脏谈博弈">Next &rarr;</a></li>
+          
+          
+        </ul>
+      </ul>
+    </div>
+    <hr>
+    
+<div id="disqus_thread"></div>
+<script>
+    var disqus_developer = 1;
+    var disqus_shortname = 'bplusbgithubio'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
   </div>
-</div>
-
-<div class="post">
-  <h3 class="title"><a href="/default/%E4%BB%8E%E6%B5%B7%E7%9B%97%E5%88%86%E8%84%8F%E8%B0%88%E5%8D%9A%E5%BC%88/">从海盗分脏谈博弈</a> <span class="date">2016-04-12</span></h3>
-
-  <p>昨天晚上室友回来说起一道面试题。</p>
-
-<blockquote>
-<p>5个海盗分100个金币，推流给分配方案，如果同意的人超过半数（含本人）则按该方案分脏，否则给方案的人被杀死。问题是假设这些海盗都极度聪明且自私，最后应该会形成怎样的局面呢？</p>
-</blockquote>
-
-<p>初看此题，觉得不难，使用回溯法来推就行。因为死掉的人不会参与决策，所以其给的方案只要考虑剩下的活人的决策就行了。所以每个人只要考虑之后的人的决策，然后使得半数比其给的条件更优就行了。</p>
-
-<p>我们将人编号为1，2，3，4，5。假设前面三个死了，轮到4号给方案，4号给方案，4号只能把所有的金币都分给5号，否则只要5号反对4号就会死5号拿到全部金币。</p>
-
-<p>如果1，2号死了，轮到3号分，3号只要给4号一枚，4号按理说就会爽快的答应他，因为否则4号一枚都得不到。但是3号如果一枚都不给4号呢？4号如果反对3号，那么自己还是0枚，还要面临被5号杀的风险。所以杀3号是不好的。但是如果4号能让3号知道自己有冒风险也要杀3号的决心，3号忌死，一定会给4号一枚金币，于是4号能通过表决心的方式获得更多的利益。</p>
-
-<p>这里出现了一个信任危机，由于3号不清楚4号的决心而不一定能给出自己的最优方案。所以最理性的判断需要知道对方的思考模式。于是我在这里定义一下海盗的目标。</p>
-
-<ol>
-<li>第一目标是自己不死。</li>
-<li>第二目标分到更多金币。</li>
-<li>第三目标在前两项不会比后面的人分配更优时，倾向于杀死同伴。</li>
-</ol>
-
-<p>前两目标是容易理解的。最后一个目标旨在消除决策时对他人策略的模糊感。比如5号倾向于不杀死同伴并且4号倾向于杀死。那3号将分配一枚给4号，如果5号倾向于杀死同伴或者4号倾向于保留同伴，那3号一定一枚也不分给4号。如果所有人都倾向于保留同伴，那1号一定会把所有金币分给自己，因为后面的人知道大家会保留同伴，也都会这么做。</p>
-
-<p>在我的3个目标定义下3号的分配方案会是[100,0,0]。2号的分配方案是[98,0,1,1]，这样能争取到4号5号的票，因为比3号给的待遇好。1号为了使超过半数的人投自己，就需要让半数人比2号给的方案好。因此1号有两种方案，[97,0,1,2,0]或者［97,0,1,0,2]。</p>
-
-
-  <div class="more">
-    <a href="/default/%E4%BB%8E%E6%B5%B7%E7%9B%97%E5%88%86%E8%84%8F%E8%B0%88%E5%8D%9A%E5%BC%88/" class="btn">read more..</a>
-  </div>
-</div>
-
-<div class="post">
-  <h3 class="title"><a href="/default/%E6%8B%96%E5%BB%B6%E7%97%87%E7%9A%84%E6%B2%BB%E7%96%97%E6%96%B9%E6%B3%95/">拖延症的治疗方法</a> <span class="date">2016-04-05</span></h3>
-
-  <p>定计划 -&gt; 无限拖延 -&gt; 愧疚 -&gt; 定计划</p>
-
-<p>现在我正处于愧疚阶段。</p>
-
-<p>这病该怎么治，我不知道。</p>
-
-<p>在这清明过后的第一天，我决定挂篇blog婊自己。</p>
-
-
-  <div class="more">
-    <a href="/default/%E6%8B%96%E5%BB%B6%E7%97%87%E7%9A%84%E6%B2%BB%E7%96%97%E6%96%B9%E6%B3%95/" class="btn">read more..</a>
-  </div>
-</div>
-
-<div class="post">
-  <h3 class="title"><a href="/default/%E7%BC%98%E8%B5%B7/">缘起</a> <span class="date">2016-03-19</span></h3>
-
-  <p>看到室友都有github，渣硕也蠢蠢欲动了呢。</p>
-
-<p>hello，github。</p>
-
-<p><img src="/assets/media/缘起/yuanqi.jpg" alt="" width="600"></p>
-
-
-  <div class="more">
-    <a href="/default/%E7%BC%98%E8%B5%B7/" class="btn">read more..</a>
-  </div>
-</div>
-
-
+  
+  <div class="span4">
+    <h4>Published</h4>
+    <div class="date"><span>2016-04-21</span></div>
+    <br>
+    <h4>Tags</h4>
+    <ul class="tag_box">
+    
+      <li>
+  <a href="/tags/#%E7%BC%96%E7%A8%8B%E4%B9%8B%E7%BE%8E-ref">编程之美 <span>1</span></a>
+</li>
+    
+      <li>
+  <a href="/tags/#%E6%AF%94%E8%B5%9B-ref">比赛 <span>1</span></a>
+</li>
+    
+    </ul>
   </div>
 </div>
 

@@ -2,7 +2,13 @@
 <rss version="2.0">  <channel>
     <title>中二病也要写代码</title>
     <link>http://bplusb.github.io</link>
-    <pubDate>12 Apr 16 16:12 CST</pubDate>
+    <pubDate>21 Apr 16 01:02 CST</pubDate>
+    <item>
+      <title>Codehunt体验</title>
+      <link>http://bplusb.github.io/default/Codehunt%E4%BD%93%E9%AA%8C/</link>
+      <pubDate>2016-04-21 12:00:00 +0800</pubDate>
+      <description>&lt;p&gt;前两年的编程之美挑战赛MS就一直在推codehunt，让codehunt和hihocoder按照参赛比例同时进入复赛决赛。&lt;/p&gt;&#xA;&#xA;&lt;p&gt;hihocoder基本就是acmicpc的赛制，国内大环境玩了这么多年，会的人多玩的人也多，所以codehunt参赛人数极少，占的比例也是非常的小。&lt;/p&gt;&#xA;&#xA;&lt;p&gt;今年的编程之美挑战赛改规则初赛都在codehunt上玩，复赛组队做工程。于是我也去体验了一把codehunt。&lt;/p&gt;&#xA;&#xA;&lt;p&gt;通常的算法竞赛会给一个清晰的问题描述然后让你写一段程序，通过对比后台的输入输出数据判断你的程序是否通过。codehunt很多时候并不告诉你具体的问题，你将程序提交，系统把使你程序错误的数据返回给你，然后你根据数据去修改程序以满足数据。&lt;/p&gt;&#xA;&#xA;&lt;p&gt;比如有一个题意是要你输入x返回-x^2，你的程序直接返回x，然后假如你直接返回x，它给你一组数据说输入1应该返回-1。于是你将程序改成返回-x。它告诉你输入3应该返回-9。于是你灵机一动，知道了应该返回-x^2。&lt;/p&gt;&#xA;&#xA;&lt;p&gt;所以codehunt考察的并不是考察算法的设计分析能力，而是通过数据对问题的联想力，或者说是一种逆向工程的能力。如果感觉不好的话，有时候即使是恨简单的题也找不到方向。&lt;/p&gt;&#xA;&#xA;&lt;p&gt;还有个根据代码打分的机制。越优雅的代码分越高，然而我并不知道它是怎么打分的，目前感觉是短的代码分高。&lt;/p&gt;&#xA;&#xA;&lt;p&gt;由于我目前只做了十几个题，也许后面还会有些不一样类型的题目。目前感受是并没有什么算法设计，正解往往很简单的程序，但是有时候猜出正解并不容易。&lt;/p&gt;&#xA;&#xA;&lt;p&gt;与逆向工程比，我还是更喜欢传统的算法竞赛。我猜MS今年完全抛弃传统竞赛的初赛的原因可能有三点。&lt;/p&gt;&#xA;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;是推广这个平台。毕竟都几年了一搜codehunt都没几个题解，可借受众很小，acm题解一搜就是一大把。于是需要一次强推。&lt;/li&gt;&#xA;&lt;li&gt;为了让比赛更公平。由于参加算法竞赛的人很多，换成这种对算法设计要求很低的方式也能使得比赛的受众更广。而且复赛做工程一定程度上避免了只有算法竞赛的人才能进入决赛。&lt;/li&gt;&#xA;&lt;li&gt;杜绝陈题。由于算法竞赛网上题量巨大，以往的复赛出题往往很容易出陈题，作为一个线上比赛，有陈题往往会造成非常大的不公平。&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&#xA;&lt;p&gt;只把codehunt作为初赛前3000名的筛选，我认为是比较可行的。但是讲真这个平台感觉一点都不有趣，解出题目也往往没有icpc带来的快感多。&lt;/p&gt;&#xA;&#xA;&lt;p&gt;最后，作为一个逆向感受力欠佳的渣渣，也不知道今年还能拿到衣服么！&lt;/p&gt;&#xA;</description>
+    </item>
     <item>
       <title>从海盗分脏谈博弈</title>
       <link>http://bplusb.github.io/default/%E4%BB%8E%E6%B5%B7%E7%9B%97%E5%88%86%E8%84%8F%E8%B0%88%E5%8D%9A%E5%BC%88/</link>
